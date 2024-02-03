@@ -1,0 +1,23 @@
+
+//  Problem -  Subtract The Product And Sum Of Digits Of An Integer
+
+
+#include <bits/stdc++.h> 
+int findProductSumDifference(int n){
+	// Write your code here
+
+	int sum = 0;
+	int pro = 1;
+
+	while(n)
+	{
+		int digit = n%10;
+
+		sum += digit;
+		pro *= digit;
+
+		n = n/10;
+	}
+
+	return pro-sum;
+}
